@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset ="utf-8">
+	<title>2048 TV Show Edition</title>
+	<link rel="stylesheet" href="style.css">
+	<script src"appjs" charset="utf-8"></script>
+</head>
+<div class="score-container" href=style.css">
+	<div class="score-title"></div>
+	<span id="score">Score: 0</span>
+</div>
+</div id="result">
+
+<style type="text/css">
+
+
+.grid{
+	display: flex;
+	flex-wrap: wrap;
+	width:400px;
+	height:400px;
+	background-color: violet;
+ 
+}
+.grid div{
+	width:100px;
+	height: 100px;
+	background-color: blue;
+}
+
+</style>
+
+</head>
+
+<body>
+<div class="grid" id="julia"></div>	
+ <JS app.js type=document.addEventListener('DOMContentLoaded',() {
+ 	const gridDisplay = document.querySelector('.grid')
+ 	cosnt scoreDisplay = document.querySelector('#score')
+ 	const resultDisplay = dcoument.querySelector('result')
+ 	const width = 4
+ 	let squares = []
+
+ 	//create a playing board
+ 	funtion creatBoard(){
+ 	for(let i=0; i <width*width; it++){
+ 	square = document.createElement ('div')
+ 	square.innerHTML = 0
+ 	gridDisplay.appendChild(square)
+ 	squares.push(square)
+ }
+ }
+ createBoard()
+ }
+
+ 	
+
+</body>
+
+
+
+</html>
+
