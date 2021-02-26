@@ -21,6 +21,9 @@
 	width:400px;
 	height:400px;
 	background-color: violet;
+	position: relative;
+
+
  
 }
 .grid div{
@@ -35,7 +38,9 @@
 
 <body>
 <div class="grid" id="julia"></div>	
- <JS app.js type=document.addEventListener('DOMContentLoaded',() {
+<script type="text/javascript"> 
+	app.js> document.addEventListener('DOMContentLoaded')callback>
+    type=document.addEventListener('DOMContentLoaded',()= {
  	const gridDisplay = document.querySelector('.grid')
  	cosnt scoreDisplay = document.querySelector('#score')
  	const resultDisplay = dcoument.querySelector('result')
@@ -44,12 +49,13 @@
 
  	//create a playing board
  	funtion creatBoard(){
- 	for(let i=0; i <width*width; it++){
+ 	for(let i=0; i <width*width; i++) {
  	square = document.createElement ('div')
  	square.innerHTML = 0
  	gridDisplay.appendChild(square)
  	squares.push(square)
  }
+
  }
  createBoard()
  }
