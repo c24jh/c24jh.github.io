@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+
+	<title></title>
+	<style type = "text/css">
+		.bird{
+			width: 300px;
+			height: 300px;
+			background-image: url(https://i.gifer.com/UYCk.gif);
+			background-repeat: no-repeat;
+			display: inline-block;
+		}
+
+	</style>
+
+</head>
+<body>
+	<div></div>
+	
+
+	<script type = "text/javascript">
+
+		function makeBird() {
+		var bird = document.createElement('div');
+
+		document.body.appendChild(bird);
+ 		 bird.style.width = "300px";
+		 bird.style.height = "300px";
+		 bird.style.backgroundImage = "url(https://i.gifer.com/UYCk.gif)";
+		bird.style.backgroundSize = "cover";
+		bird.style.backgroundRepeat = "no-repeat";
+
+
+	bird.addEventListener ("click",function(){
+		 
+			bird.style.opacity = "0";
+		})
+		}
+
+
+		
+		// document.addEventListener("click", makeBird)
+		
+
+
+
+
+ setInterval( makeBird , 100)
+
+	</script>
+</body>
+</html>
