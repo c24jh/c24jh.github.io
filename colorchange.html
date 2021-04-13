@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style type="text/css">
+    #color {
+        width: 200px;
+        height: 200px;
+        border: 5px solid black;
+    }
+    #name{
+    	width:100px;
+    	height: 100px;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="color"></div>
+    <script type="text/javascript">
+    var color = document.getElementById("color");
+    var array = ["rgb(252, 3, 194)", "rgb(3, 252, 231)", "rgb(136, 3, 252)", "rgb(239, 247, 7)", "rgb(31, 245, 7)"];
+
+    var number = 0;
+
+    color.addEventListener("click", function() {
+        color.style.backgroundColor = array[number];
+        number = number + 1;
+
+        if (number>4){
+        	number = 0;
+        }
+
+    })
+
+    </script>
+    <div id ="name"></div><a style="color: black;">PICK YOUR COLOR!</a></div>
+</body>
+
+</html>
+
+

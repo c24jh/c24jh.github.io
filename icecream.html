@@ -1,0 +1,114 @@
+<html>
+
+<head>
+    <title></title>
+    <style type="text/css">
+    #cone {
+        width: 300px;
+        height: 600px;
+        background-image: url("cone.png.jpg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+
+
+    }
+
+    #mm {
+        background-image: url("mm.jpg");
+        background-size: cover;
+        width: 100px;
+        height: 100px;
+        background-repeat: no-repeat;
+        display: inline-block;
+        position: relative;
+        background-position: center;
+    }
+
+    #sprinkles {
+        background-image: url("sprinkles.png.jpg");
+        background-size: cover;
+        width: 100px;
+        height: 100px;
+        background-repeat: no-repeat;
+        display: inline-block;
+        position: relative;
+        background-position: center;
+    }
+
+    #gummybears {
+        background-image: url("gummybears.png.jpg");
+        background-size: cover;
+        width: 75px;
+        height: 75px;
+        background-repeat: no-repeat;
+        display: inline-block;
+        position: relative;
+        background-position: center;
+    }
+    #chips {
+        background-image: url("chips.png");
+        background-size: cover;
+        width: 75px;
+        height: 75px;
+        background-repeat: no-repeat;
+        display: inline-block;
+        position: relative;
+        background-position: center;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="mm"></div>
+    <div id="sprinkles"></div>
+    <div id="cone"></div>
+    <div id="gummybears"></div>
+    <div id="chips"></div>
+    <script type="text/javascript">
+    var image;
+
+
+    function makeTopping() {
+        var topping = document.createElement("top")
+        topping.style.width = "75px";
+        topping.style.height = "75px";
+        topping.style.borderRadius = "50%";
+        topping.style.position = "absolute";
+        topping.style.backgroundImage = "url(" + image + ")";
+        topping.style.backgroundSize = "cover";
+
+        scoop.addEventListener("mousemove", function(event) {
+            console.log(event.clientX, event.clientY);
+        });
+
+        scoop.appendChild(topping);
+
+        topping.style.left = event.clientX - 50 + "px";
+        topping.style.top = event.clientY - 150 + "px";
+    };
+
+
+    mm.addEventListener("click", function() {
+
+        image = "mm.jpg"
+    });
+
+    sprinkles.addEventListener("click", function() {
+
+        image = "sprinkles.png.jpg"
+    });
+    gummybears.addEventListener("click", function() {
+
+        image = "gummybears.png.jpg"
+    });
+    chips.addEventListener("click", function() {
+
+        image = "chips.png"
+    });
+
+    cone.addEventListener("click", makeTopping);
+    </script>
+</body>
+
+</html>
