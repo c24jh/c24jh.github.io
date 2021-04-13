@@ -68,15 +68,16 @@
     <script type="text/javascript">
     var image;
 
-
+    var scoop = document.getElementById("cone");
     function makeTopping() {
         var topping = document.createElement("top")
-        topping.style.width = "75px";
-        topping.style.height = "75px";
-        topping.style.borderRadius = "50%";
+        topping.style.width = "70px";
+        topping.style.height = "70px";
+        topping.style.borderRadius = "40%";
         topping.style.position = "absolute";
-        topping.style.backgroundImage = "url(" + image + ")";
+        topping.style.backgroundImage = image;
         topping.style.backgroundSize = "cover";
+
 
         scoop.addEventListener("mousemove", function(event) {
             console.log(event.clientX, event.clientY);
@@ -91,20 +92,20 @@
 
     mm.addEventListener("click", function() {
 
-        image = "mm.jpg"
+        image = "url(mm.jpg)"
     });
 
     sprinkles.addEventListener("click", function() {
 
-        image = "sprinkles.png.jpg"
+        image = "url(sprinkles.png.jpg)"
     });
     gummybears.addEventListener("click", function() {
 
-        image = "gummybears.png.jpg"
+        image = "url(gummybears.png.jpg)"
     });
     chips.addEventListener("click", function() {
 
-        image = "chips.png"
+        image = "url(chips.png)"
     });
 
     cone.addEventListener("click", makeTopping);
