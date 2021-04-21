@@ -5,7 +5,7 @@
 
 	<style type="text/css">
 		
-		#pizza{
+		#show{
 			width:300px;
 			height:300px;
 		
@@ -18,9 +18,9 @@
 
 	<center>
 
-		<h1>What pizza are you?</h1>
+		<h1>What TV show should you watch?</h1>
 		
-		<div id="pizza">
+		<div id="show">
 			
 		</div>
 	</center>
@@ -31,26 +31,20 @@
 
 		//Math.random() is a function that already exists in javascript that generates random number between 0 and 1//
 
-		var cores = ["purple", "green", "blue", "red", "violet", "magenta", "black", "orange"]
+		var shows = ["one tree hill", "scandal", "grey's anatomy", "friends", "how to get away with murder", "how i met your mother", "modern family", "keeping up with the kardashians"]
 
-		var kartinkye = ["url(https://www.pngkey.com/png/full/169-1694345_cheese-pizza-pie-png.png)", 
+	
+var box = document.getElementById("shows");
 
-		"url(https://www.freeiconspng.com/uploads/pizza-png-27.png)", 
+	box.addEventListener("click", function(){
 
-		"url(https://mellowmushroom.com/wp-content/themes/mm/images/menu-pizza1.png)", 
+			var x = Math.floor(Math.random()*8);
 
-		"url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3qc-MDOkvlgHCmFMPeXQoWl2ejB62rgzu1VeZe6nH0Zj5hOHoE3NVcrZ9Mnw7kf0YmT4&usqp=CAU)", 
-]var box = document.getElementById('pizza');
-
-		box.addEventListener("click", function(){
-
-			var pig = Math.floor(Math.random()*4);
-
-			console.log(cores[pig])
+			console.log(shows[pig])
 
 			box.style.backgroundImage = kartinkye[pig];
 
-			box.style.backgroundColor = cores[pig];
+			box.style.backgroundColor = shows[pig];
 
 
 		})

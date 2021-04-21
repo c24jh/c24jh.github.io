@@ -6,9 +6,19 @@
 	<link rel="stylesheet" href="style.css">
 	<script src"appjs" charset="utf-8"></script>
 </head>
-
+<body>
 <style type="text/css">
 
+#x{
+	background-image: url("x.png.jpg");
+	background-size: cover;
+	width: 100px;
+	height: 100px;
+	background-repeat: no-repeat;
+	display:inline-block;
+	position: relative;
+	background-position: center;
+}
 
 .grid{
 	display: flex;
@@ -32,19 +42,6 @@
 
 
 }
-.x{
-	  position: relative;
-        display: inline-block;
-        width: 150px;
-        height: 150px;
-        background-size: contain;
-        background-image: url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wiktionary.org%2Fwiki%2FX&psig=AOvVaw3iIOK5LgZcz4lnjM77AdbY&ust=1618266323590000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNitq4Ce9-8CFQAAAAAdAAAAABAD);
-}
-.x div{
-	width:90px;
-	height:80px;
-	background-color: white;
-}
 
 td{
 
@@ -60,25 +57,27 @@ td{
 </head>
 
 <body>
-	<h1>TIK TAC TOE!</h1>
+
+	<h1>TIC TAC TOE!</h1>
+<div class = "x"></div>
 <div class="grid" id="julia">
 	
 	<table>
 		<tr>
-			<td></td>
-			<td></td>
-			<td></td>
+			<td><div class="xo"></div></td>
+			<td><div class="xo"></div></td>
+			<td><div class="xo"></div></td>
 			
 		
 		<tr>
-			<td></td>
-			<td></td>
-			<td></td>
+			<td><div class="xo"></div></td>
+			<td><div class="xo"></div></td>
+			<td><<div class="xo"></div>/td>
 			
 		<tr>
-			<td></td>
-			<td></td>
-			<td></td>
+			<td><div class="xo"></div></td>
+			<td><div class="xo"></div></td>
+			<td><div class="xo"></div></td>
 			
 		
 	
@@ -88,14 +87,35 @@ td{
 </div>	
 
 
+<script type="text/javascript">
 
+var image;
 
+var player = document.getElementByID("grid")
 
+function getx(){
+	var X = document.createElement()"top"
+	x.style.width = "70px";
+        x.style.height = "70px";
+        x.style.borderRadius = "40%";
+        x.style.position = "absolute";
+        x.style.backgroundImage = image;
+        x.style.backgroundSize = "cover";
 
- 	
+        player.addEventListener("mousemove", function(event){
+        	console.log(event.ClientX, event.ClientY);
+        });
 
+        x.addEventListener("click", function() {
+
+        image = "url(x.png.jpg)"
+        box.style.backgroundImage = word[random];
+    });
+}
+</script>
+
+ 
 </body>
-
 
 
 </html>
