@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
+
+
+	<title></title>
+	
+	<style type="text/css">
+		body{background-color: white;}
+
+	h1{
+		color: black;
+		font-family: 'Bebas Neue', cursive;
+		text-align: center;
+		font word-spacing: 30px;
+		font-size: 300%;
+	}
+
+	.heart{
+
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 100px;
+        height: 100px;
+        position: relative;
+        display: inline-block;
+        font-family: 'Bebas Neue', cursive;
+        text-align: center;
+        font-size: 16px;
+        margin: 20px;
+        position: relative;
+        display: inline-block;
+        margin-left: 30px;
+        transition: 1s;
+    }
+    .pic{
+    	background-image: url("purpleheart.png");
+    }
+
+   h1 {
+        font-family: 'ABeeZee', sans-serif;
+        position: relative;
+    }
+ h2 {
+        position: fixed;
+        font-family: 'ABeeZee', sans-serif;
+        bottom: 0;
+        right: 50px;
+        
+    }
+   
+ 
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
+
+</head>
+
+
+	}
+
+
+	</style>
+	<body>
+		
+		<h1>THANK YOU FOR...</h1>
+		<h2>I LOVE YOU</h2>
+
+		 <script type="text/javascript">
+    function makeHeart(i) {
+
+
+        var heart = document.createElement("heart");
+
+        document.body.appendChild(heart);
+        heart.classList.add("heart");
+        heart.classList.add("pic");
+        document.body.appendChild(heart);
+
+        heart.addEventListener("click", function() {
+            function remove() {
+                heart.classList.remove("pic");
+                heart.innerHTML = array[i];
+            };
+			    function add() {
+                heart.classList.add("pic");
+                heart.innerHTML = "";
+            }
+            remove();
+            setTimeout(add, 2000)
+            console.log(event);
+        });
+
+
+        function move() {
+            heart.style.left = Math.round(Math.random() * 70) + "px";
+            heart.style.top = Math.round(Math.random() * 60) - 30 + "px";
+
+        };
+
+        setTimeout(move, 1);
+        setInterval(move, 1000);
+
+
+    };
+
+    var array = ["a michelin star chef", "being my biggest inspiration", "being the best. mom. ever.", "my role model", "cooking with me", "sitting through grey's anatomy", "making me laugh", "immitating sue...", "being down when I'm down, and up when I'm up", "running with me", "ALWAYS being there for me", "giveing me the emotional gene", "overdoing every holiday", "all your love", "your kindness", "url(israelmom.png.jpg)", "url(babymom.png.jpg)"];
+
+	
+for (var i = 0; i <= array.length - 1; i++) {
+        makeHeart(i);
+    }
+    </script>
+</body>
+
+</html>
