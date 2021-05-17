@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <title></title>
+    <style type="text/css">
+    
+
+    #word {
+        width: 400px;
+        height: 400px;
+        border: 1px white;
+        transition: 0.2s;
+    text-align:center;
+    background-color: white;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    }
+
+    body{
+        font-family: 'Bebas Neue', cursive;
+        font-size: 25;
+        color: violet;
+    }
+
+
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>Click to find what character you are based on your responses!</h1>
+        <div id="word"></div>
+        <script type="text/javascript">
+        var shows = ["url(peyton.png.jpg)", "url(lucas.png.jpg)","url(brooke.png.jpg)","url(nathan.png.jpg)","url(haley.png.jpg)", "url(quinn.png.jpg)","url(clay.png.jpg)", "url(julian.png.jpg)"
+        ];
+    
+
+        var box = document.getElementById('word');
+      
+
+        box.addEventListener("click", function() {
+            var random = Math.floor(8*Math.random());
+            console.log(shows[random])
+            box.style.backgroundImage = shows[random];           
+        })
+
+        </script>
+    </center>
+</body>
+
+</html>
+
+        </script>
+    </center>
+</body>
+
+</html>
