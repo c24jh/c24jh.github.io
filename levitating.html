@@ -7,9 +7,9 @@
 	<style type="text/css">
 		
 		#ipod{
-			width:400px;
-			height:400px;
-			background-image:url(ipod.png);
+			width:1400px;
+			height:1700px;
+			
 			
 		}
 	</style>
@@ -22,6 +22,8 @@
 	<audio id="song" src="2.mp3"></audio>
 
 <script type="text/javascript">
+
+var image = ["url(ipod.png)"]
 	
 
 	var box = document.getElementById("ipod");
@@ -44,7 +46,7 @@ if(apples%2 == 1) {
 	song.play();}
 
 else if (apples%2 ==0) {
-	box.style.backgroundColor ="black";
+	box.style.backgroundImage ="url(ipod.png)";
 	song.pause();
 }
 })
